@@ -1,0 +1,11 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local-only reference material
+reference/*.pdf
+
+# Temporary files
+*.tmp
+*.log
