@@ -33,11 +33,11 @@ document.documentElement.classList.add('js');
     }
   };
 
-  let savedTheme = 'light';
+  let savedTheme = 'dark';
   try {
-    savedTheme = localStorage.getItem(storageKey) || 'light';
+    savedTheme = localStorage.getItem(storageKey) || 'dark';
   } catch (_) {
-    savedTheme = 'light';
+    savedTheme = 'dark';
   }
 
   applyTheme(savedTheme, false);

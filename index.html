@@ -4,7 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Carta de cocina de mercado de Restaurante La Pericana, Alcoy.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#11110f">
+  <script>
+    (() => {
+      const storageKey = 'la-pericana-theme';
+      let theme = 'dark';
+      try {
+        theme = localStorage.getItem(storageKey) || 'dark';
+      } catch (_) {
+        theme = 'dark';
+      }
+      document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+    })();
+  </script>
   <title>La Pericana | Cuina de mercat</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,14 +27,14 @@
 </head>
 <body>
   <div class="theme-switcher" role="group" aria-label="Elegir apariencia">
-    <button type="button" class="theme-choice" data-theme-choice="light" aria-pressed="true">
+    <button type="button" class="theme-choice" data-theme-choice="light" aria-pressed="false">
       <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="12" cy="12" r="4"></circle>
         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
       </svg>
       <span>Claro</span>
     </button>
-    <button type="button" class="theme-choice" data-theme-choice="dark" aria-pressed="false">
+    <button type="button" class="theme-choice" data-theme-choice="dark" aria-pressed="true">
       <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
       </svg>
